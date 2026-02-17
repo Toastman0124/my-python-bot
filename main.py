@@ -1,4 +1,6 @@
+import os
 import requests
+sckey = os.getenv("MY_API_KEY")
 
 def get_detailed_weather():
     # 定義城市字典：{ '英文名稱': '顯示名稱' }
@@ -40,7 +42,7 @@ def get_detailed_weather():
     return header + "\n\n" + "\n\n".join(weather_reports) + footer
 
 def send_server_chan(content):
-    api_key = "SCT314665THD71aeZjNXfG77gIwE8oKyii"
+    api_key = "MY_API_KEY"
     url = f"https://sctapi.ftqq.com/{api_key}.send"
     params = {
         "title": "明日各地氣溫預報",

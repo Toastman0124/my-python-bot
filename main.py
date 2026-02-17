@@ -40,7 +40,7 @@ def get_detailed_weather():
     return header + "\n\n" + "\n\n".join(weather_reports) + footer
 
 def send_server_chan(content):
-    api_key = MY_API_KEY_WE
+    api_key = "MY_API_KEY_WE"
     url = f"https://sctapi.ftqq.com/{api_key}.send"
     params = {
         "title": "明日各地氣溫預報",
